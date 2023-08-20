@@ -1,0 +1,36 @@
+{{ block title }}
+    Page title
+{{ endblock }}
+{{ block content }}
+<script>
+     var form = $(".form");
+     let selectElement = document.getElementById('monto_ciudadano_sinSoborno');
+
+     let extraerValorButton = document.getElementById('extraerValor');
+     extraerValorButton.addEventListener('click', function() {
+         $(form[0]).val(selectElement.value)
+     })
+
+</script>
+
+<p> Castigar soborno del ciudadano con <select class="form"  name="monto_ciudadano_sinSoborno" id="monto_ciudadano_sinSoborno">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+    <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales </p>
+    {{ form.castigar_soborno }}
+<p> No castigar soborno </p>
+    {{ form.no_castigar_soborno }}
+<br><br>
+    <button  class="btn btn-primary" id="extraerValor">Siguiente</button>
+
+
+
+{{ endblock }}

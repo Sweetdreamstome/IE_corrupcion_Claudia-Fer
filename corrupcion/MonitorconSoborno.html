@@ -1,0 +1,88 @@
+{{ block title }}
+    Page title
+{{ endblock }}
+{{ block content }}
+<script>
+
+     var form1 = $(".form1");
+     var form2 = $(".form2");
+     var form3 = $(".form3");
+     var form4 = $(".form4");
+
+     let selectElement1 = document.getElementById('ambos_monto_ciudadano_conSoborno');
+     let selectElement2 = document.getElementById('ambos_monto_oficial_conSoborno');
+     let selectElement3 = document.getElementById('monto_ciudadano_conSoborno');
+     let selectElement4 = document.getElementById('monto_oficial_conSoborno');
+
+     let extraerValorButton = document.getElementById('extraerValor');
+     extraerValorButton.addEventListener('click', function() {
+         $(form1[0]).val(selectElement1.value)
+         $(form2[0]).val(selectElement2.value)
+         $(form3[0]).val(selectElement3.value)
+         $(form4[0]).val(selectElement4.value)
+     })
+
+</script>
+
+<p> Castigar a ambos. Con <select class="form1"  name="ambos_monto_ciudadano_conSoborno" id="ambos_monto_ciudadano_conSoborno">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+    <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales al ciudadano y <select class="form2"  name="ambos_monto_oficial_conSoborno" id="ambos_monto_oficial_conSoborno">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+    <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales al oficial.</p>
+    {{ form.castigar_soborno_ambos }}
+
+<p> Castigar soborno del ciudadano con <select class="form3"  name="monto_ciudadano_conSoborno" id="monto_ciudadano_conSoborno">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+    <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales. </p>
+ {{ form.castigar_soborno_ciudadano }}
+
+<p> Castigar soborno del oficial con <select class="form4"  name="monto_oficial_conSoborno" id="monto_oficial_conSoborno">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+    <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select> monedas experimentales. </p>
+ {{ form.castigar_soborno_oficial }}
+
+<p> No castigar. </p>
+ {{ form.no_castigar_soborno_ambos }}
+
+<br><br>
+    <button  class="btn btn-primary" id="extraerValor">Siguiente</button>
+
+
+
+{{ endblock }}
