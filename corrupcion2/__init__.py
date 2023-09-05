@@ -1,5 +1,4 @@
-from pickle import NONE
-from tkinter import Widget
+
 from otree.api import *
 
 doc = """
