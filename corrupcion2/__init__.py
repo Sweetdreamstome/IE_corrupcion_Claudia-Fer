@@ -288,8 +288,8 @@ class Resultados(Page):
 
 class Final(Page):
     @staticmethod
-    def is_displayed(self):
-        return self.round_number >= 5
+    def is_displayed(player):
+        return player.round_number >= 5
 
     pass
 
