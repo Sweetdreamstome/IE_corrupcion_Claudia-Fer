@@ -297,7 +297,7 @@ class Final(Page):
 
 page_sequence = [#Instrucciones,
                  #Instrucciones_roles,
-                 Preguntas_control,
+                 #Preguntas_control,
                  WaitPage_Ciudadano2,
                  WaitPage_Oficial,
                  WaitPage_Monitor,
