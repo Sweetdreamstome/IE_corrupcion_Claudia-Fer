@@ -84,61 +84,6 @@ class Player(BasePlayer):
         ]
     )
 
-    p7 = models.LongStringField(
-
-    )
-
-    p8 = models.BooleanField(
-        choices=[
-            [True, 'Femenino'],
-            [False, 'Masculino']
-        ]
-    )
-
-    p9 = models.LongStringField(
-
-    )
-
-    p10 = models.LongStringField(
-
-    )
-
-    p11 = models.LongStringField(
-
-    )
-    p12 = models.BooleanField(
-        choices=[
-            [True, 'Derecha'],
-            [False, 'Izquierda']
-        ]
-    )
-    p13 = models.BooleanField(
-        choices=[
-            [True, 'Opción 1'],
-            [False, 'Opción 2']
-        ]
-    )
-
-    p14 = models.BooleanField(
-        choices=[
-            [True, 'Opción 1'],
-            [False, 'Opción 2']
-        ]
-    )
-
-    p15 = models.BooleanField(
-        choices=[
-            [True, 'Opción 1'],
-            [False, 'Opción 2']
-        ]
-    )
-
-    p16 = models.BooleanField(
-        choices=[
-            [True, 'Opción 1'],
-            [False, 'Opción 2']
-        ]
-    )
 
     monto_ciudadano_sinSoborno = models.IntegerField(min=1, max=10, blank=True)
 
@@ -152,6 +97,18 @@ class Player(BasePlayer):
 
 
 # PAGES
+
+class Control(Page):
+    form_model = 'player'
+    form_fields = [ 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15',
+                   'p16']
+
+    # 5 variables.
+    # 2 tipos de pregunta
+    def is_displayed(self):
+        # La página se mostrará si la ronda actual es menor o igual a 2
+        return self.round_number <= 1
+
 class Instrucciones(Page):
     pass
 
@@ -170,15 +127,13 @@ class Instrucciones_roles(Page):
 
 class Preguntas_control(Page):
     form_model = 'player'
-    form_fields = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15',
-                   'p16']
+    form_fields = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6']
 
     # 5 variables.
     # 2 tipos de pregunta
     def is_displayed(self):
         # La página se mostrará si la ronda actual es menor o igual a 2
         return self.round_number <= 1
-
 
 class WaitPage_Ciudadano1(WaitPage):
 
