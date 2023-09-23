@@ -84,7 +84,57 @@ class Player(BasePlayer):
         ]
     )
 
+   p8 = models.BooleanField(
+        choices=[
+            [True, 'Femenino'],
+            [False, 'Masculino']
+        ]
+    )
 
+    p9 = models.LongStringField(
+
+    )
+
+    p10 = models.LongStringField(
+
+    )
+
+    p11 = models.LongStringField(
+
+    )
+    p12 = models.BooleanField(
+        choices=[
+            [True, 'Derecha'],
+            [False, 'Izquierda']
+        ]
+    )
+    p13 = models.BooleanField(
+        choices=[
+            [True, 'Opción 1'],
+            [False, 'Opción 2']
+        ]
+    )
+
+    p14 = models.BooleanField(
+        choices=[
+            [True, 'Opción 1'],
+            [False, 'Opción 2']
+        ]
+    )
+
+    p15 = models.BooleanField(
+        choices=[
+            [True, 'Opción 1'],
+            [False, 'Opción 2']
+        ]
+    )
+
+    p16 = models.BooleanField(
+        choices=[
+            [True, 'Opción 1'],
+            [False, 'Opción 2']
+        ]
+    )
     monto_ciudadano_sinSoborno = models.IntegerField(min=1, max=10, blank=True)
 
     ambos_monto_ciudadano_conSoborno = models.IntegerField(Choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
