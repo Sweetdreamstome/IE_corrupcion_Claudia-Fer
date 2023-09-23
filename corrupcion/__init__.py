@@ -14,12 +14,13 @@ class C(BaseConstants):
     Ciudadano2_ROLE = 'Ciudadano2'
     Oficial_ROLE = 'Oficial'
     Monitor_ROLE = 'Monitor'
-
-
+    
 class Subsession(BaseSubsession):
     pass
 
-
+def creating_session(subsession):
+    subsession.group_randomly()
+    
 class Group(BaseGroup):
     gato = models.BooleanField(initial=False)
     soborno_aceptado = models.BooleanField(initial=False)
