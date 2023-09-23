@@ -100,7 +100,7 @@ class Player(BasePlayer):
 
 class Control(Page):
     form_model = 'player'
-    form_fields = [ 'p7', 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15',
+    form_fields = [ 'p8', 'p9', 'p10', 'p11', 'p12', 'p13', 'p14', 'p15',
                    'p16']
 
     # 5 variables.
@@ -125,7 +125,7 @@ class Instrucciones_roles(Page):
         return self.round_number <= 1
 
 
-class Preguntas_control(Page):
+class Comprension (Page):
     form_model = 'player'
     form_fields = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6']
 
