@@ -135,6 +135,7 @@ class Player(BasePlayer):
             [False, 'Opción 2']
         ]
     )
+
     monto_ciudadano_sinSoborno = models.IntegerField(min=1, max=10, blank=True)
 
     ambos_monto_ciudadano_conSoborno = models.IntegerField(Choices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
