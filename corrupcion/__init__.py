@@ -250,9 +250,10 @@ class Final(Page):
 
 # FALTA CLASE CUANDO CIUDADANO NO SOBORNA
 
-page_sequence = [Instrucciones,
+page_sequence = [Control,
+    Instrucciones,
                  Instrucciones_roles,
-                 Preguntas_control,
+                 Comprension,
                  WaitPage_Ciudadano2,
                  WaitPage_Oficial,
                  WaitPage_Monitor,
