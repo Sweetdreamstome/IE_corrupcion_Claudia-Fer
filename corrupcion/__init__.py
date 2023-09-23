@@ -29,16 +29,16 @@ class Player(BasePlayer):
     hola_ciudadano = models.BooleanField(
         initial = False,
         choices=[
-            [True, 'Ofrecer soborno'],
-            [False, 'No ofrecer soborno']
+            [True, 'Ofrecer pago'],
+            [False, 'No ofrecer pago']
         ]
     )
 
     pokis_oficial = models.BooleanField(
         initial = False,
         choices=[
-            [True, 'Aceptar soborno'],
-            [False, 'No aceptar soborno']
+            [True, 'Aceptar pago'],
+            [False, 'No aceptar pago']
         ]
     )
 
